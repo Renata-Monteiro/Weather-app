@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <script src="https://kit.fontawesome.com/b3951a8249.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-app">
+
+
+            <form id="search-form">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="search" placeholder="Enter a city" autocomplete="off" id="city-input"
+                            class="form-control shadow-sm" />
+                    </div>
+                    <div class="col-3">
+                        <input type="submit" value="🔍" class="search-button" id="search-button" />
+                    </div>
+                    <div class="col-3">
+                        <button class="current-location" id="current-location">
+                            Current location 📍
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <h1 id="city">
+                Porto
+            </h1>
+            <p id="current-time">
+            </p>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <i class="fas fa-sun"></i>
+                    <span class="temperature" id="temperature"> </span>
+                    <span class="units">
+                        <a href="#" id="celsius-link"> ºC </a> | <a href="#" id="fahrenheit-link"> ºF </a>
+                    </span>
+                </div>
+                <div class="col-6" id="current-data">
+                    <ul>
+                        <li id="description">
+                            Description
+                        </li>
+                        <li>
+                            Humidity: <span id="humidity"> </span> %
+                        </li>
+                        <li>
+                            Wind: <span id="wind"> </span> km/h
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="weekly-grid">
+                <div class="row">
+                    <div class="col-2">
+                        <strong> Mon </strong>
+                        <br />
+                        <p class="date">
+                            15/02
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <strong> Tue </strong>
+                        <br />
+                        <p class="date">
+                            16/02
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <strong> Wed </strong>
+                        <br />
+                        <p class="date">
+                            17/02
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <strong> Thu </strong>
+                        <br />
+                        <p class="date">
+                            18/02
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <strong> Fri </strong>
+                        <br />
+                        <p class="date">
+                            19/02
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <div class="weekly-temperature-grid">
+                <div class="row">
+                    <div class="col-2">
+                        10ºC
+                        <br />
+                        <p class="minimum">
+                            7ºC
+                        </p>
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="col-2">
+                        9ºC
+                        <br />
+                        <p class="minimum">
+                            5ºC
+                        </p>
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="col-2">
+                        11ºC
+                        <br />
+                        <p class="minimum">
+                            8ºC
+                        </p>
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <div class="col-2">
+                        7ºC
+                        <br />
+                        <p class="minimum">
+                            5ºC
+                        </p>
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <div class="col-2">
+                        11ºC
+                        <br />
+                        <p class="minimum">
+                            9ºC
+                        </p>
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/script.js"></script>
+</body>
+
+</html>

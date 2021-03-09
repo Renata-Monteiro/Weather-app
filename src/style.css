@@ -1,0 +1,140 @@
+body {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-size: 4000px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 19px;
+  color: #1e212d;
+}
+
+h1,
+#current-time {
+  font-family: "Lato", sans-serif;
+  color: #27aaa2;
+}
+h1 {
+  font-weight: bolder;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: -30px;
+}
+p {
+  font-size: 23px;
+  text-align: center;
+  margin: 0 auto;
+}
+strong {
+  color: #27aaa2;
+}
+
+label {
+  font-size: 25px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.weather-app {
+  border: 1px solid #27aaa2;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 4px;
+}
+
+#city-input {
+  margin-left: 60px;
+  margin-top: 9px;
+}
+
+.search-button,
+.current-location {
+  background-color: rgba(230, 230, 230, 0.3);
+  border: 0.5px solid rgb(118, 118, 118);
+  border-radius: 3px;
+  margin-top: 4px;
+}
+
+.search-button {
+  margin-left: 40px;
+  margin-top: 12px;
+}
+
+.current-location {
+  font-size: 16px;
+  margin-left: -60px;
+  margin-top: 15px;
+}
+
+#current-time {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+
+.fa-sun {
+  font-size: 50px;
+  color: #fce38a;
+  margin-right: 10px;
+  margin-left: 20px;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+#current-data {
+  padding-left: 60px;
+}
+.temperature {
+  font-size: 50px;
+}
+
+.units {
+  position: relative;
+  top: -22px;
+  font-size: 18px;
+}
+
+.weekly-grid,
+.weekly-temperature-grid {
+  text-align: center;
+  margin: 10px 40px;
+  padding: 0 0 0 60px;
+}
+
+.weekly-grid {
+  padding-top: 20px;
+}
+
+.date {
+  background-color: rgba(135, 229, 223, 0.3);
+}
+
+.minimum {
+  font-size: 17px;
+  color: rgba(30, 33, 45, 0.7);
+}
+
+.fa-cloud {
+  font-size: 30px;
+  text-align: center;
+  opacity: 0.4;
+}
+
+.fa-cloud-rain {
+  font-size: 38px;
+  text-align: center;
+  padding: 3px 0;
+  opacity: 0.4;
+}
+
+hr {
+  border-top: 3px solid #91091e;
+  border-radius: 3px;
+  max-width: 100%;
+}
