@@ -77,11 +77,13 @@ li {
   text-align: left;
   margin-left: 20px;
   font-size: 22px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
 #description {
   font-size: 17px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .fa-sun {
