@@ -147,3 +147,8 @@ hr {
   border-radius: 3px;
   max-width: 100%;
 }
+
+.footer {
+  font-size: 16px;
+  text-align: center;
+}
