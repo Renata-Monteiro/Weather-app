@@ -41,10 +41,10 @@ li {
 
 .weather-app {
   border: 1px solid #27aaa2;
-  padding: 15px;
+  padding: 20px;
   margin: 20px auto;
   max-width: 600px;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 #city-input {
@@ -81,9 +81,9 @@ li {
 }
 
 #description {
-  font-size: 18px;
+  font-size: 20px;
   text-align: left;
-  margin-left: 23px;
+  margin-left: 20px;
   color: #27aaa2;
 }
 
@@ -121,7 +121,7 @@ li {
 }
 
 .date {
-  background-color: rgba(135, 229, 223, 0.3);
+  text-shadow: 1px 1px 1px #27aaa2;
 }
 
 .minimum {
