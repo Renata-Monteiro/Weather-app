@@ -20,20 +20,19 @@
 <body>
     <div class="container">
         <div class="weather-app">
-
-            <form id="search-form">
+            <form id="search-form" class="mb-2">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-5">
                         <input type="search" placeholder="Enter a city" autocomplete="off" id="city-input"
                             class="form-control shadow-sm" />
                     </div>
                     <div class="col-3">
                         <input type="submit" value="🔍" class="search-button" id="search-button" />
                     </div>
-                    <div class="col-3">
-                        <button class="current-location" id="current-location">
-                            Current location 📍
-                        </button>
+                    <div class="col-4">
+                        <input type="button" value="Current location 📍" class="current-location"
+                            id="current-location" />
+                        </input>
                     </div>
                 </div>
             </form>
@@ -42,7 +41,7 @@
                 Porto
             </h1>
             <ul>
-                <li id="current-time">
+                <li id="date">
 
                 </li>
                 <li id="description">
@@ -52,10 +51,11 @@
 
             <div class="row">
                 <div class="col-6">
-                    <i class="fas fa-sun"></i>
+                    <img src="" alt="Weather image" id="icon">
                     <span class="temperature" id="temperature"> 15 </span>
                     <span class="units">
-                        <a href="#" id="celsius-link"> ºC </a> | <a href="#" id="fahrenheit-link"> ºF </a>
+                        <a href="#" id="celsius-link" class="active"> ºC </a> |
+                        <a href="#" id="fahrenheit-link"> ºF </a>
                     </span>
                 </div>
                 <div class="col-6" id="current-data">
@@ -72,91 +72,21 @@
 
             <br />
 
-            <div class="weekly-grid">
-                <div class="row">
-                    <div class="col-2">
-                        <strong> Mon </strong>
-                        <br />
-                        <p class="date">
-                            15/02
-                        </p>
-                    </div>
-                    <div class="col-2">
-                        <strong> Tue </strong>
-                        <br />
-                        <p class="date">
-                            16/02
-                        </p>
-                    </div>
-                    <div class="col-2">
-                        <strong> Wed </strong>
-                        <br />
-                        <p class="date">
-                            17/02
-                        </p>
-                    </div>
-                    <div class="col-2">
-                        <strong> Thu </strong>
-                        <br />
-                        <p class="date">
-                            18/02
-                        </p>
-                    </div>
-                    <div class="col-2">
-                        <strong> Fri </strong>
-                        <br />
-                        <p class="date">
-                            19/02
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <hr />
-
-            <div class="weekly-temperature-grid">
-                <div class="row">
-                    <div class="col-2">
+            <div class="row weather-forecast" id="forecast">
+                <div class="col-2">
+                    <strong>
+                        12:00
+                    </strong>
+                    <img src="#" class="weather-icon" />
+                    <p class="maximum">
                         10ºC
-                        <br />
-                        <p class="minimum">
-                            7ºC
-                        </p>
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <div class="col-2">
-                        9ºC
-                        <br />
-                        <p class="minimum">
-                            5ºC
-                        </p>
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <div class="col-2">
-                        11ºC
-                        <br />
-                        <p class="minimum">
-                            8ºC
-                        </p>
-                        <i class="fas fa-cloud-rain"></i>
-                    </div>
-                    <div class="col-2">
+                    </p>
+                    <p class="minimum">
                         7ºC
-                        <br />
-                        <p class="minimum">
-                            5ºC
-                        </p>
-                        <i class="fas fa-cloud-rain"></i>
-                    </div>
-                    <div class="col-2">
-                        11ºC
-                        <br />
-                        <p class="minimum">
-                            9ºC
-                        </p>
-                        <i class="fas fa-cloud-rain"></i>
-                    </div>
+                    </p>
                 </div>
             </div>
+
         </div>
         <div class="footer">
             <a href="https://github.com/Renata-Monteiro/Weather-app" target="_blank"> Open-source code</a> by Renata
