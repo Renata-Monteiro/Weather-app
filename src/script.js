@@ -1,7 +1,6 @@
 // feature 1
 function formatDate(timestamp) {
   let now = new Date(timestamp);
-  let currentDate = document.querySelector("#current-date");
   let days = [
     "Sunday",
     "Monday",
@@ -9,13 +8,11 @@ function formatDate(timestamp) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[now.getDay()];
-
   return `${day} ${formatHours(timestamp)}`;
 }
-
 function formatHours(timestamp) {
   let now = new Date(timestamp);
   let hours = now.getHours();
@@ -28,8 +25,9 @@ function formatHours(timestamp) {
   }
   return `${hours}:${minutes}`;
 }
-
-currentDate.innerHTML = `${day} ${hours}:${minutes}`;
+let currentDate = document.querySelector("#date");
+let now = new Date();
+currentDate.innerHTML = formatDate(now);
 
 // feature 2
 
@@ -67,11 +65,12 @@ function search(city) {
   //let h1= document.querySelector("#city");
   //h1.innerHTML= `📍 ${searchInput.value}`;
   let units = "metric";
-  let city = document.querySelector("#city-input").value;
   let apiKey = "91a393a925da1a29653db26755f33f28";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
+
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
