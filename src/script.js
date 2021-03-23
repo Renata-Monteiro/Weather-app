@@ -1,4 +1,3 @@
-// feature 1
 function formatDate(timestamp) {
   let now = new Date(timestamp);
   let days = [
@@ -29,7 +28,8 @@ let currentDate = document.querySelector("#date");
 let now = new Date();
 currentDate.innerHTML = formatDate(now);
 
-// feature 2
+
+
 
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -39,10 +39,6 @@ function showTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-
-  //document.querySelector("#city").innerHTML=`📍 ${response.data.name}`;
-  //document.querySelector("#city").innerHTML= response.data.name;
-  //document.querySelector("#temperature").innerHTML=Math.round(response.main.data.temp);
   celsiusTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
@@ -58,16 +54,39 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-//
+
+function displayForecast(response){
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML=null;
+  let forecast = null;
+  
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+  <div class="col-2">
+    <strong>
+      ${formatHours(forecast.dt * 1000)}
+    </strong>
+    <img 
+      src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+    />
+    <div class="weather-forecast-temperature">
+    <strong> ${Math.round(forecast.main.temp_max)}º </strong>
+    <span class="minimum"> ${Math.round(forecast.main.temp_min)}º   </span>
+  </div>
+  </div>              
+`;    
+  } 
+}
 
 function search(city) {
-  //let searchInput=document.querySelector("#city-input");
-  //let h1= document.querySelector("#city");
-  //h1.innerHTML= `📍 ${searchInput.value}`;
   let units = "metric";
   let apiKey = "91a393a925da1a29653db26755f33f28";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 
