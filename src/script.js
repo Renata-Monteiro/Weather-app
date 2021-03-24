@@ -71,8 +71,8 @@ function displayForecast(response){
       src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
     />
     <div class="weather-forecast-temperature">
-    <strong> ${Math.round(forecast.main.temp_max)}º </strong>
-    <span class="minimum"> ${Math.round(forecast.main.temp_min)}º   </span>
+    <strong class="maximum"> ${Math.round(forecast.main.temp_max)}º </strong>
+    <strong class="minimum"> ${Math.round(forecast.main.temp_min)}º </strong>
   </div>
   </div>              
 `;    

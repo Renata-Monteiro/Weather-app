@@ -1,13 +1,14 @@
 body {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  background-size: 4000px;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-size: px;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 19px;
   color: #1e212d;
 }
 
 h1,
-#current-date {
+#date,
+#description {
   font-family: "Lato", sans-serif;
   color: #27aaa2;
 }
@@ -17,17 +18,9 @@ h1 {
   padding-top: 15px;
   padding-bottom: -30px;
 }
-p {
-  font-size: 23px;
-  text-align: center;
-  margin: 0 auto;
-}
+
 strong {
   color: #27aaa2;
-}
-
-label {
-  font-size: 25px;
 }
 
 ul {
@@ -42,10 +35,10 @@ li {
 a {
   text-decoration: none;
   cursor: default;
+  padding-bottom: 0px;
 }
 
 .weather-app {
-  border: 1px solid #27aaa2;
   padding: 20px;
   margin: 20px auto;
   max-width: 600px;
@@ -63,6 +56,7 @@ a {
   border: 0.5px solid rgb(118, 118, 118);
   border-radius: 3px;
   margin-top: 4px;
+  box-shadow: 1px 1px 2px rgba(30, 33, 45, 0.3);
 }
 
 .search-button {
@@ -78,10 +72,10 @@ a {
   padding: 5px 0;
 }
 
-#current-date {
+#date {
   text-align: left;
   margin-left: 20px;
-  font-size: 22px;
+  font-size: 18px;
   padding-bottom: 0px;
 }
 
@@ -93,12 +87,20 @@ a {
   text-transform: capitalize;
 }
 
+#weather img {
+  padding-left: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
 .active {
   color: #1e212d;
 }
 
 #current-data {
-  padding-left: 60px;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-top: 30px;
 }
 .temperature {
   font-size: 50px;
@@ -110,31 +112,28 @@ a {
   font-size: 18px;
 }
 
-.weather-forecast {
+#forecast {
   text-align: center;
-  margin: 10px 40px;
-  padding: 0 0 0 60px;
+  margin: 0 auto;
 }
 
-.weekly-grid {
-  padding-top: 20px;
+#forecast img {
+  padding-right: 10px;
 }
 
 .maximum {
   font-size: 16px;
+  color: rgba(30, 33, 45, 0.9);
 }
 
 .minimum {
   font-size: 14px;
   color: rgba(30, 33, 45, 0.7);
-  padding-top: 0px;
 }
 
-.weather-forecast .img {
-  font-size: 30px;
-  text-align: center;
-  opacity: 0.4;
-  padding: 3px 0;
+#forecast img {
+  width: 80px;
+  margin: 0 auto;
 }
 
 hr {
@@ -148,4 +147,6 @@ hr {
 .footer {
   font-size: 16px;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 23px;
 }
