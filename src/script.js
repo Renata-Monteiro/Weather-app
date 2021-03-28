@@ -97,7 +97,6 @@ function handleSubmit(event) {
 }
 
 
-
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
